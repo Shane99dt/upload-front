@@ -56,8 +56,8 @@ const Form = () => {
     })
 
     const responseImage = await requestImage.json()
-    console.log(requestUser)
-    console.log(requestImage)
+    console.log(responseImage)
+
 
     if (requestUser.status === 200) {
       navigate('/info')
