@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom"
 
 const Form = () => {
   const [firstName, setFirstName] = useState("")
@@ -49,17 +49,17 @@ const Form = () => {
 
     const formdata = new FormData()
     formdata.append('picture', picture, picture.name)
-    formdata.append('UserId', responseUser.id)
 
-    const requestImage = await fetch('http://localhost:5000/photo', {
+    const requestImage = await fetch(`http://localhost:5000/photo/${responseUser.id}`, {
       method: 'POST',
       body: formdata
     })
 
     const responseImage = await requestImage.json()
-    console.log(responseImage)
+    console.log(requestUser)
+    console.log(requestImage)
 
-    if (responseUser.status === 201) {
+    if (requestUser.status === 200) {
       navigate('/info')
     }
 
