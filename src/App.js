@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from "./pages/Signup";
 import Info from "./pages/Info";
 import { UserContextProvider } from "./context/User";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <UserContextProvider>
           <Routes>
             <Route path="/" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/info" element={<Info />} />
           </Routes>
         </UserContextProvider>

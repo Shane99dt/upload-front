@@ -9,3 +9,5 @@ const User = async (token) => {
 
   return response;
 };
+
+export { User };

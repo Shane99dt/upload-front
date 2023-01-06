@@ -16,17 +16,18 @@ const UserContextProvider = ({ children }) => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (token) {
-  //     localStorage.setItem("token", token);
-  //     getUser();
-  //   }
-  // }, [token]);
+  useEffect(() => {
+    if (token) {
+      localStorage.setItem("token", token);
+      getUser();
+    }
+  }, [token]);
 
-  // const getUser = async () => {
-  //   const userResponse = await User(token);
-  //   setUser(userResponse);
-  // };
+  const getUser = async () => {
+    const userResponse = await User(token);
+    setUser(userResponse);
+    setImage(userResponse.Picture);
+  };
 
   const logout = () => {
     localStorage.removeItem("token");
