@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
 import Form from "../components/Form";
+import LinkButton from "../components/LinkButton";
 
 const Login = () => {
   return (
     <div>
       <div className="absolute top-5 right-5">
-        <Link
-          className="border-2 border-gray-500 rounded-md px-4 py-2"
-          to={"/"}
-        >
-          Signup
-        </Link>
+        <LinkButton to={"signup"} label={"Sign up"} />
       </div>
       <Form type={"login"} />
     </div>

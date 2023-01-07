@@ -4,6 +4,7 @@ import Signup from "./pages/Signup";
 import Info from "./pages/Info";
 import { UserContextProvider } from "./context/User";
 import Login from "./pages/Login";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       <BrowserRouter>
         <UserContextProvider>
           <Routes>
-            <Route path="/" element={<Signup />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/info" element={<Info />} />
           </Routes>

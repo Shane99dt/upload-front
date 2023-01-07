@@ -1,7 +1,16 @@
 import Form from "../components/Form";
+import LinkButton from "../components/LinkButton";
 
 const Signup = () => {
-  return <Form type={"signup"} />;
+  return (
+    <div>
+      <div className="absolute top-5 right-5">
+        <label className="text-gray-300 mr-3">Already have an account?</label>
+        <LinkButton to={"login"} label={"Log in"} />
+      </div>
+      <Form type={"signup"} />
+    </div>
+  );
 };
 
 export default Signup;
